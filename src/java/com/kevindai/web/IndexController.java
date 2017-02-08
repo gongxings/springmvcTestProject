@@ -40,7 +40,8 @@ public class IndexController {
         byte[] b = new byte[1024];
         int c;
         while((c = inputStream.read(b)) > 0){
-            outputStream.write(b);
+            //outputStream.write(b);
+            outputStream.write(b,0,c);
         }
 
         inputStream.close();
